@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Simon</title>
+		<link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+		<script defer src="./scripts/game.js"></script>
+        <audio id="Sgreen" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" preload="auto"></audio>
+        <audio id="Sred" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" preload="auto"></audio>
+        <audio id="Syellow" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" preload="auto"></audio>
+        <audio id="Sblue" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" preload="auto"></audio>
+        <audio id="Swrong" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3" preload="auto"></audio>
+	</head>
+
+	<body>
+		<div class="game">
+				<div class="clr clr1" id="green" ></div>
+				<div class="clr clr2" id="red"></div>
+				<div class="clr clr3" id="yellow"></div>
+				<div class="clr clr4" id="blue"></div>
+				<div class="middle">
+					
+				<p style="font-size: 45px;font-size: 32px;font-weight: bolder;margin-left: 5px;margin-top: 10px;">Simon</p>
+				<p>
+				    <div class="led" id="led"> </div>
+				</p>
+							<p> 
+								<span>
+									<span id="count" class="outTx"></span>
+									<button type="button" class="btnSt" id="start"></button>
+									<button type="button" class="strict" id="strict"></button>
+								</span>
+							</p>
+
+							<p>
+								<span style="margin-left: -9px;font-size: 13px;">
+									COUNT         
+								</span>
+								<span style="margin-left: 26px;font-size: 13px;">
+									START         
+								</span>
+								<span style="margin-left: 28px;font-size: 13px;">
+									STRICT         
+								</span>
+							</p>
+
+
+
+
+							<br><br>
+							<p>
+									<label class="switch">
+									  <input type="checkbox" id="OnBtn">
+									  <span class="slider"></span>
+									</label>
+							</p>
+				</div>
+			</div>
+
+	</body>
+</html>
