@@ -3,6 +3,7 @@ var count=0;
 var timeouts = [];
 var store=[];
 var usr_str=[];
+var cpu_turn=true;
 var strict_mode = false;
 
 
@@ -51,30 +52,40 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 //-----------------mouse click by script-------------
     function click_red()
     {
-        document.getElementById("red").click();
-        document.getElementById('Sred').play();
-        usr_str.pop();
+        	document.getElementById('Sred').play();
+            document.getElementById("red").style.cssText = "background-color:red";
+            timeouts.push(setTimeout(function(){
+            document.getElementById("red").style.cssText = "background-color:#9f0f17";
+            },400));
     }
     
     function click_green()
     {
-        document.getElementById("green").click();
         document.getElementById('Sgreen').play();
-        usr_str.pop();
+            document.getElementById("green").style.cssText = "background-color:green";
+            timeouts.push(setTimeout(function(){
+            document.getElementById("green").style.cssText = "background-color:#00a74a";
+            },400));
     }
 
     function click_yellow()
     {
-        document.getElementById("yellow").click();
         document.getElementById('Syellow').play();
-        usr_str.pop();
+            document.getElementById("yellow").style.cssText = "background-color:yellow";
+            timeouts.push(setTimeout(function(){
+            document.getElementById("yellow").style.cssText = "background-color:#cca707";
+            },400));
+
     }
 
     function click_blue()
     {
-        document.getElementById("blue").click();
-        document.getElementById('Sblue').play();
-        usr_str.pop();
+       
+            document.getElementById('Sblue').play();
+            document.getElementById("blue").style.cssText = "background-color:blue";
+            timeouts.push(setTimeout(function(){
+            document.getElementById("blue").style.cssText = "background-color:#094a8f";
+            },400));
     }
 
 
@@ -95,32 +106,29 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
     function fn1(){
 
-
-
-            if(usr_str.length === store.length)
-                return;
+            if(usr_str.length == store.length || cpu_turn === true)
+               return;
 
             
-
             usr_str.push(1);
 
-            
+           
+
 
             document.getElementById('Sred').play();
             document.getElementById("red").style.cssText = "background-color:red";
             timeouts.push(setTimeout(function(){
-            document.getElementById("red").style.cssText = "background-color:coral";
+            document.getElementById("red").style.cssText = "background-color:#9f0f17";
             },400));
         }
 
 
     function fn2(){
 
-            if(usr_str.length === store.length)
-                return;
+            if(usr_str.length == store.length || cpu_turn === true)
+               return;
 
-            
-            
+                     
             usr_str.push(2);
 
             
@@ -129,15 +137,15 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             document.getElementById('Sgreen').play();
             document.getElementById("green").style.cssText = "background-color:green";
             timeouts.push(setTimeout(function(){
-            document.getElementById("green").style.cssText = "background-color:#6bcc77";
+            document.getElementById("green").style.cssText = "background-color:#00a74a";
             },400));
         }
 
 
     function fn3(){
 
-            if(usr_str.length === store.length)
-                return;
+            if(usr_str.length == store.length || cpu_turn === true)
+               return;
 
            
 
@@ -148,13 +156,13 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             document.getElementById('Syellow').play();
             document.getElementById("yellow").style.cssText = "background-color:yellow";
             timeouts.push(setTimeout(function(){
-            document.getElementById("yellow").style.cssText = "background-color:#ffd150";
+            document.getElementById("yellow").style.cssText = "background-color:#cca707";
             },400));
         }
 
     function fn4(){
 
-            if(usr_str.length == store.length)
+            if(usr_str.length == store.length || cpu_turn === true)
                return;
 
            
@@ -168,7 +176,7 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             document.getElementById('Sblue').play();
             document.getElementById("blue").style.cssText = "background-color:blue";
             timeouts.push(setTimeout(function(){
-            document.getElementById("blue").style.cssText = "background-color:#5b50ff";
+            document.getElementById("blue").style.cssText = "background-color:#094a8f";
             },400));
         }
         
@@ -177,8 +185,8 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             if(on===false)
                 return;
 
-            console.log(usr_str);
-
+            console.log("usr_str in comp:"+usr_str);
+            console.log("store in comp:"+store);
             if(JSON.stringify(store) === JSON.stringify(usr_str))
             {
                 addMove();
@@ -203,7 +211,7 @@ document.getElementById("OnBtn").addEventListener("change", function(){
                 }
                 else
                 {
-                    click_sequence();
+                    click_sequence(store);
                 }
             }
         }
@@ -243,8 +251,10 @@ document.getElementById("OnBtn").addEventListener("change", function(){
         }
 
 
-    function click_sequence(){
+    function click_sequence(store){
         
+    		cpu_turn=true;
+
             if(on===false)
                 return;
             var time = 1000;
@@ -273,7 +283,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
              while(usr_str.length > 0) {
                  usr_str.pop();
              }
-             //timeouts.push(setTimeout(function(){usr_turn=ture;}),time+1);
+
+             console.log("store : "+store);
+             console.log("usr_str: "+usr_str);
+
+             timeouts.push(setTimeout(function(){cpu_turn=false;},time-999));
              time+=700;
              timeouts.push(setTimeout(comp,time+1000*store.length,store,usr_str));
 
