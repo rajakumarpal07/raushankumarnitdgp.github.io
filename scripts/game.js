@@ -112,8 +112,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             
             usr_str.push(1);
 
-           
-
+         /*   if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            {
+               comp(store,usr_str);
+            }
+*/
 
             document.getElementById('Sred').play();
             document.getElementById("red").style.cssText = "background-color:red";
@@ -131,8 +134,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
                      
             usr_str.push(2);
 
-            
-
+ /*           if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            {
+               comp(store,usr_str);
+            }
+*/
 
             document.getElementById('Sgreen').play();
             document.getElementById("green").style.cssText = "background-color:green";
@@ -151,8 +157,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
             usr_str.push(3);
 
-            
-
+/*            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            {
+               comp(store,usr_str);
+            }
+*/
             document.getElementById('Syellow').play();
             document.getElementById("yellow").style.cssText = "background-color:yellow";
             timeouts.push(setTimeout(function(){
@@ -169,8 +178,12 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
 
             usr_str.push(4);
-
             
+/*            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            {
+               comp(store,usr_str);
+            }
+*/            
 
 
             document.getElementById('Sblue').play();

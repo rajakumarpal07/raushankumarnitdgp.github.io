@@ -1,3 +1,8 @@
+*
+{
+    outline: none;        
+}
+
 body
 {
     background-image: url("Background.png");
@@ -24,11 +29,15 @@ body
 		border-color: #333;
 }
 
+.changeTo
+{
+    cursor:pointer;
+}
 
 .clr1
 {
 		background-color: #00a74a;
-		border-top-left-radius: 100%;
+        border-top-left-radius: 100%;
 }
 
 .clr2 
@@ -96,7 +105,7 @@ body
     margin-left: 67px;
     border-style: solid;
     border-color: lightslategray;
-    outline:none;
+   
 }
 
 
@@ -108,7 +117,7 @@ body
     border-radius: 100%;
     margin-left: 33px;
     border-color: darkslategrey;
-    outline: none;
+    
 }
 
 .led
