@@ -5,7 +5,7 @@ var store=[];
 var usr_str=[];
 var cpu_turn=true;
 var strict_mode = false;
-
+var wrng=false;
 
 function reset()
 {
@@ -112,11 +112,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             
             usr_str.push(1);
 
-         /*   if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
             {
                comp(store,usr_str);
             }
-*/
+
 
             document.getElementById('Sred').play();
             document.getElementById("red").style.cssText = "background-color:red";
@@ -134,11 +134,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
                      
             usr_str.push(2);
 
- /*           if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
             {
                comp(store,usr_str);
             }
-*/
+
 
             document.getElementById('Sgreen').play();
             document.getElementById("green").style.cssText = "background-color:green";
@@ -157,17 +157,30 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
             usr_str.push(3);
 
-/*            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
             {
                comp(store,usr_str);
             }
-*/
+
             document.getElementById('Syellow').play();
             document.getElementById("yellow").style.cssText = "background-color:yellow";
             timeouts.push(setTimeout(function(){
             document.getElementById("yellow").style.cssText = "background-color:#cca707";
             },400));
         }
+
+    function  err()
+    {
+                document.getElementById('Swrong').play();
+                timeouts.push(setTimeout(function(){
+                    document.getElementById("count").innerHTML="!!";
+                },100));
+
+                timeouts.push(setTimeout(function(){
+                    document.getElementById("count").innerHTML=count;
+                },700));
+
+    }
 
     function fn4(){
 
@@ -179,11 +192,10 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
             usr_str.push(4);
             
-/*            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
+            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])
             {
                comp(store,usr_str);
-            }
-*/            
+            }            
 
 
             document.getElementById('Sblue').play();
@@ -198,6 +210,7 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             if(on===false)
                 return;
 
+
             console.log("usr_str in comp:"+usr_str);
             console.log("store in comp:"+store);
             if(JSON.stringify(store) === JSON.stringify(usr_str))
@@ -206,25 +219,21 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             }
             else
             {
-                document.getElementById('Swrong').play();
-                timeouts.push(setTimeout(function(){
-                    document.getElementById("count").innerHTML="!!";
-                },100));
-
-                timeouts.push(setTimeout(function(){
-                    document.getElementById("count").innerHTML=count;
-                },700));
-
+                console.log("Wrong Move");
+                console.log("usr_str in comp:"+usr_str);
+                console.log("store in comp:"+store);                
+                wrng=true;
                 if(strict_mode === true)
                 {
                     strict_mode=false;
+                    err();
                     // change-led -back
                     document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";
                     timeouts.push(setTimeout(startGame,500));
                 }
                 else
                 {
-                    click_sequence(store);
+                    click_sequence(store,wrng);
                 }
             }
         }
@@ -260,13 +269,26 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
             count=store.length;
             document.getElementById("count").innerHTML=count;
-            click_sequence(store);
+            wrng=false;
+            click_sequence(store,wrng);
         }
 
 
-    function click_sequence(store){
+    function click_sequence(store,wrng){
         
     		cpu_turn=true;
+
+            
+
+            for (var i = 0; i < timeouts.length; i++) {
+                clearTimeout(timeouts[i]);
+            }
+
+            if(wrng===true)
+            {
+                err();
+                wrng=false;
+            }
 
             if(on===false)
                 return;
