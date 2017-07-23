@@ -182,6 +182,7 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
     }
 
+
     function fn4(){
 
             if(usr_str.length == store.length || cpu_turn === true)
