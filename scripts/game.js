@@ -48,7 +48,7 @@ document.getElementById("OnBtn").addEventListener("change", function(){
                 document.getElementById("blue").addEventListener("click", fn4);
                 document.getElementById("start").addEventListener("click", fn);
                 document.getElementById("strict").addEventListener("click", fs);
-                document.getElementById("count").innerHTML="-";
+                document.getElementById("count").innerHTML="--";
             }
     });
 
@@ -185,6 +185,9 @@ document.getElementById("OnBtn").addEventListener("change", function(){
                 },100));
 
                 timeouts.push(setTimeout(function(){
+                    if(count<10)
+                    document.getElementById("count").innerHTML='0'+count;
+                    else
                     document.getElementById("count").innerHTML=count;
                 },700));
 
@@ -282,6 +285,9 @@ document.getElementById("OnBtn").addEventListener("change", function(){
             }
 
             count=store.length;
+            if(count<10)
+            document.getElementById("count").innerHTML='0'+count;
+            else
             document.getElementById("count").innerHTML=count;
             wrng=false;
             click_sequence(store,wrng);
@@ -361,7 +367,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
               usr_str.pop();
         }
 
+        if(count<10)
+        document.getElementById("count").innerHTML='0'+count;
+        else
         document.getElementById("count").innerHTML=count;
+        
         document.getElementById("strict").addEventListener("click", fs);
         document.getElementById("red").addEventListener("click", fn1);
         document.getElementById("green").addEventListener("click", fn2 );
