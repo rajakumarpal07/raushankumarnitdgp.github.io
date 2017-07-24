@@ -19,6 +19,11 @@ function reset()
     document.getElementById("blue").removeEventListener("click",fn4);
     document.getElementById("strict").removeEventListener("click", fs);
     document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";
+    document.getElementById("red").style.cssText = "background-color:#9f0f17";
+    document.getElementById("green").style.cssText = "background-color:#00a74a";
+    document.getElementById("yellow").style.cssText = "background-color:#cca707";
+    document.getElementById("yellow").style.cssText = "background-color:#cca707";
+
     strict_mode=false;
 
 }
