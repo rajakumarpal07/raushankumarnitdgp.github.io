@@ -10,6 +10,7 @@ body
 {
         background-image: url("Background.png");
 }
+
 .game 
 {
         height: 472px;
@@ -101,6 +102,7 @@ body
         top: 104px;
         left: 12px;
 }
+
 .btnSt
 {
         height: 30;
@@ -145,34 +147,52 @@ body
        margin-top: -49px;
 }
 
+.gTitle
+{
+    font-size: 60px;
+    font-weight: bolder;
+    margin-left: 5px;
+    margin-top: 23px;
+}
+
+.cnt
+{
+    margin-left: -3px;
+    font-size: 13px;
+}
+
+.strt
+{
+    margin-left: 26px;
+    font-size: 13px;
+}
+
+.stct
+{
+    margin-left: 9px;
+    font-size: 13px;
+}
+
+.off
+{
+    position: absolute;
+    font-size:12px;
+    top: 194px;
+    left: 66px;
+}
+
+
+.on
+{
+    font-size:12px;
+    position: absolute;
+    top: 194px;
+    left: 129px;
+}
 
 
 
-
-
-
-
-
-
-
-/* ----------------------- for toggle button-------------------------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ----------------------- w3 toggle button-------------------------------*/
 
 
 /* Hide default HTML checkbox */
