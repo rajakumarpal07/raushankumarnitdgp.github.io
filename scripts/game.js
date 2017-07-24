@@ -258,6 +258,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
 
     function addMove()
         {
+            if(count>20)
+            {
+                alert("WON!!");
+                return;
+            }
             if(on===false)
                 return;
 
