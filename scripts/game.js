@@ -1,4 +1,4 @@
-//
+
     function  err(){
                 document.getElementById('Swrong').play();
                 timeouts.push(setTimeout(function(){
