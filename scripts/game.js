@@ -17,6 +17,9 @@ function reset()
     document.getElementById("green").removeEventListener("click",fn2);
     document.getElementById("yellow").removeEventListener("click",fn3);
     document.getElementById("blue").removeEventListener("click",fn4);
+    document.getElementById("strict").removeEventListener("click", fs);
+    document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";
+    strict_mode=false;
 
 }
 
@@ -226,11 +229,16 @@ document.getElementById("OnBtn").addEventListener("change", function(){
                 wrng=true;
                 if(strict_mode === true)
                 {
-                    strict_mode=false;
                     err();
                     // change-led -back
-                    document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";
-                    timeouts.push(setTimeout(startGame,500));
+                    while(store.length > 0) {
+                         store.pop();
+                    }
+
+                    while(usr_str.length > 0) {
+                        usr_str.pop();
+                    }
+                    timeouts.push(setTimeout(addMove,500));
                 }
                 else
                 {
@@ -336,11 +344,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
     {
         reset();
         
-	    document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";
+	    
         if(on===false)
             return;
        
-       while(store.length > 0) {
+        while(store.length > 0) {
               store.pop();
         }
 
@@ -349,11 +357,11 @@ document.getElementById("OnBtn").addEventListener("change", function(){
         }
 
         document.getElementById("count").innerHTML=count;
+        document.getElementById("strict").addEventListener("click", fs);
         document.getElementById("red").addEventListener("click", fn1);
         document.getElementById("green").addEventListener("click", fn2 );
         document.getElementById("yellow").addEventListener("click", fn3);
         document.getElementById("blue").addEventListener("click", fn4);
-        document.getElementById("strict").addEventListener("click", fs);
 
 
         //----------------------------------------------//
