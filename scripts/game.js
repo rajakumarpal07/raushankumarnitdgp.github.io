@@ -348,7 +348,7 @@ document.getElementById("OnBtn").addEventListener("change", function(){
              console.log("usr_str: "+usr_str);
 
              timeouts.push(setTimeout(function(){cpu_turn=false;},time-999));
-             time+=700;
+             time+=1500;
              timeouts.push(setTimeout(comp,time+1000*store.length,store,usr_str));
 
 
