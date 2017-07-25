@@ -32,7 +32,7 @@
                 {
                     err();
                     // change-led -back
-                    EmptyArr();
+                    emptyArr();
                     timeouts.push(setTimeout(addMove,500));
                 }
                 else
@@ -142,7 +142,7 @@
 
 //empty the memory
 
-    function EmptyArr(){
+    function emptyArr(){
          while(store.length > 0) {
               store.pop();
         }
@@ -161,7 +161,7 @@
         if(on===false)
             return;
        
-        EmptyArr();
+        emptyArr();
 
         if(count<10)
         document.getElementById("count").innerHTML='0'+count;
