@@ -306,6 +306,7 @@ input[type=checkbox]:checked + .slider:before {
 
 
 @media (max-width: 991px) and (min-width: 767px){
+        
         .game 
         {
                 height: 50vw;
