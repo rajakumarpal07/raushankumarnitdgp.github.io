@@ -9,6 +9,7 @@
 body
 {
         background-image: url("Background.png");
+        font-family: Oswald, sans-serif;
 }
 
 
@@ -57,7 +58,7 @@ body
 {
         background-color: #9f0f17;
 	border-top-right-radius: 100%;
-        position: absolute;
+        position: absolute;font-family: 'Alfa Slab One',cursive;
         right: 0;
 }  
     
@@ -83,38 +84,40 @@ body
 
 .middle
 {
-		width: 46%;
-		height: 46%;
-		position: absolute;
-		border-radius: 100%;
-		top: 24%;
-		left: 24%;
-		background-color: #ECE7EE;
-		border-style: solid;
-		border-width: 0.9324vw;
-                border-color: #333;
+	width: 46%;
+	height: 46%;
+	position: absolute;
+	border-radius: 100%;
+	top: 24%;
+	left: 24%;
+	background-color: #ECE7EE;
+	border-style: solid;
+	border-width: 0.9324vw;
+        border-color: #333;
 }
 
 .gTitle
 {
-        width: 72%;
+        width: 82%;
         display: inline-block;
         position: absolute;
+        font-family: Alfa Slab One,cursive;
         top: 20%;
-        left: 12%;
+        left: 8%;
         font-weight: 800;
 }
+
 .gName
 {
         font-size: 3.8vw;
         display: inline;
 }
+
 .trademark
 {
         font-size: 1.2vw;
         top: 10%;
         position: absolute;
-        -moz-transform:translateX(6.5vw);
 }
 
 
@@ -130,9 +133,10 @@ body
 
 .outTx 
 {
+        font-family: VT323;
         color: #DC0D29;
         padding: 0px;
-        font-size: 2.4vw;
+        font-size: 2.8vw;
         width: 28%;
         height: 70%;
         background-color: #32050C;
@@ -160,7 +164,11 @@ body
         border-color: #444444;
         top: 18%;
         left: 56%;
-        box-shadow: 0px 0px 1.6vw #343438;
+        box-shadow: 0px 0.2vw 0.2vw 0.08vw #6b6a6c;
+}
+
+.btnSt:active{
+        box-shadow: 0px 0.1px 0.2vw 0.05vw #6b6a6c;
 }
 
 .strict
@@ -176,9 +184,12 @@ body
         border-color: #444444;
         top: 18%;
         left: 85%;
-        box-shadow: 0px 0px 1.6vw #343438;
+        box-shadow: 0px 0.2vw 0.2vw 0.08vw #6b6a6c;
 }
 
+.strict:active{
+        box-shadow: 0px 0.1px 0.2vw 0.05vw #6b6a6c;
+}
 
 
 .led
@@ -297,7 +308,14 @@ input[type=checkbox]:checked + .slider:before {
 @media (max-width: 991px) and (min-width: 767px){
         .game 
         {
-        height: 50vw;
-        width: 50vw;
+                height: 50vw;
+                width: 50vw;
+        }
+
+        .trademark
+        {
+                font-size: 1.2vw;
+                top: 10%;
+                position: absolute;
         }
  }
