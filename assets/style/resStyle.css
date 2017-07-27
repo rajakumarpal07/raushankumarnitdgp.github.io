@@ -1,0 +1,303 @@
+*
+{
+        outline: 0;
+        outline-style:none;
+        outline-width:0 ;
+        user-select:none;     
+}
+
+body
+{
+        background-image: url("Background.png");
+}
+
+
+ 
+.game 
+{
+        height: 38vw;
+        width: 38vw;
+        background-color: #333;
+        border-radius: 100%;
+        text-align: center;
+        position: relative;
+        vertical-align: middle;
+        margin:0 auto;
+        box-shadow: 0px 0px 1.6vw #333;
+        top:8vw;
+}
+
+
+
+
+.changeTo
+{
+        cursor:pointer;
+}
+
+
+.clr
+{
+        height: 46%;
+        width: 46%;
+	display: inline-block;
+    	border-style: solid;
+	border-width: 1.1vw;
+        border-color:#333;
+}
+.clr1
+{
+       
+        background-color: #00a74a;
+        border-top-left-radius: 100%;
+        position: absolute;
+        left: 0;
+}
+.clr2
+{
+        background-color: #9f0f17;
+	border-top-right-radius: 100%;
+        position: absolute;
+        right: 0;
+}  
+    
+
+.clr3
+{
+        background-color: #cca707;
+	border-bottom-left-radius: 100%;
+        position: absolute;
+        left: 0;
+        bottom:0;
+}
+
+
+.clr4
+{
+        background-color: #094a8f;
+	border-bottom-right-radius: 100%;
+        position: absolute;
+        right: 0;
+        bottom:0;
+}
+
+.middle
+{
+		width: 46%;
+		height: 46%;
+		position: absolute;
+		border-radius: 100%;
+		top: 24%;
+		left: 24%;
+		background-color: #ECE7EE;
+		border-style: solid;
+		border-width: 0.9324vw;
+                border-color: #333;
+}
+
+.gTitle
+{
+        width: 72%;
+        display: inline-block;
+        position: absolute;
+        top: 20%;
+        left: 12%;
+        font-weight: 800;
+}
+.gName
+{
+        font-size: 3.8vw;
+        display: inline;
+}
+.trademark
+{
+        font-size: 1.2vw;
+        top: 10%;
+        position: absolute;
+        -moz-transform:translateX(6.5vw);
+}
+
+
+
+.screen
+{
+        display: block;
+        width:90%;
+        height: 20%;
+        position: absolute;
+        top: 48%;
+}
+
+.outTx 
+{
+        color: #DC0D29;
+        padding: 0px;
+        font-size: 2.4vw;
+        width: 28%;
+        height: 70%;
+        background-color: #32050C;
+        border-style: solid;
+        border-width: 0.3vw;
+        border-color: #222;
+        border-radius: 10%;
+        position: absolute;
+        display: inline-block;
+        left: 3%;
+}
+
+
+
+.btnSt
+{
+        position: absolute;
+        height: 1.8vw;
+        width: 1.8vw;
+        display: inline-block;
+        background-color: rgb(252, 1, 2);
+        border-radius: 100%;
+        border-width: 0.2vw;
+        border-style: solid;
+        border-color: #444444;
+        top: 18%;
+        left: 56%;
+        box-shadow: 0px 0px 1.6vw #343438;
+}
+
+.strict
+{
+        position: absolute;
+        height: 1.8vw;
+        width: 1.8vw;
+        display: inline-block;
+        background-color: rgb(240, 243, 16);
+        border-radius: 100%;
+        border-width: 0.2vw;
+        border-style: solid;
+        border-color: #444444;
+        top: 18%;
+        left: 85%;
+        box-shadow: 0px 0px 1.6vw #343438;
+}
+
+
+
+.led
+{
+        width: 0.8vw;
+        height: 0.8vw;
+        position: absolute;
+        border-radius: 100%;
+        background-color: rgb(34, 34, 34);
+        left: 88%;
+        top: -15%;
+} 
+
+
+.cnt
+{
+        position: absolute;
+        font-size: 1vw;
+        top: 84%;
+        left: 8%;
+}
+
+.strt
+{
+        position: absolute;
+        font-size: 1vw;
+        top: 84%;
+        left: 52%;
+}
+
+.stct
+{
+        position: absolute;
+        font-size: 1vw;
+        top: 84%;
+        left: 82%;
+}
+
+.on-off
+{
+        width: 34%;
+        height: 15%;
+        position: relative;
+        display: block;
+        top: 80%;
+        left: 32%;
+}
+
+.off
+{
+        position: absolute;
+        font-size: 1vw;
+        top: 50%;
+        right: 70%;
+}
+
+
+.on
+{
+        font-size: 1vw;
+        position: absolute;
+        top: 50%;
+        left: 88%;
+}
+
+
+
+/* ----------------------- w3 toggle button-------------------------------*/
+
+
+/* Hide default HTML checkbox */
+
+.switch input {display:none;}
+
+
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 3vw;
+    height: 1.5vw;
+    top: 42%;
+    left: 35%;
+}
+
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:#222222;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.2vw;
+    width: 1.2vw;
+    left: 0.1vw;
+    bottom: 0.1vw;
+    border-radius:10%;
+    background-color: #3193DE;
+}
+
+input[type=checkbox]:checked + .slider:before {
+    left:1.5vw;
+}
+
+
+
+@media (max-width: 991px) and (min-width: 767px){
+        .game 
+        {
+        height: 50vw;
+        width: 50vw;
+        }
+ }

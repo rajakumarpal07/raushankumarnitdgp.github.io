@@ -1,62 +1,56 @@
 <html>
 	<head>
 		<title>Simon</title>
-		<link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+		<link rel="stylesheet" type="text/css" href="./assets/style/resStyle.css">
 		<script defer src="./scripts/events.js"></script>
 		<script defer src="./scripts/game.js"></script>
-        <audio id="Sgreen" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3" preload="auto"></audio>
-        <audio id="Sred" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3" preload="auto"></audio>
-        <audio id="Syellow" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3" preload="auto"></audio>
-        <audio id="Sblue" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3" preload="auto"></audio>
-        <audio id="Swrong" src="http://www.freesound.org/data/previews/331/331912_3248244-lq.mp3" preload="auto"></audio>
+        <audio id="Sgreen" src="./assets/sounds/simonSound0.ogg"></audio>
+        <audio id="Sred" src="./assets/sounds/simonSound1.ogg" ></audio>
+        <audio id="Syellow" src="./assets/sounds/simonSound2.ogg"></audio>
+        <audio id="Sblue" src="./assets/sounds/simonSound3.ogg"></audio>
+        <audio id="Swrong" src="./assets/sounds/simonSound4.ogg"></audio>
 	</head>
 
 	<body>
-		<div class="game">
-				<div class="clr clr1 changeTo" id="green" ></div>
-				<div class="clr clr2 changeTo" id="red"></div>
-				<div class="clr clr3 changeTo" id="yellow"></div>
-				<div class="clr clr4 changeTo" id="blue"></div>
-				<div class="middle">
-					
-				<p class="gTitle">Simon</p>
-				<p>
-				    <div class="led" id="led"> </div>
-				</p>
-							<p> 
-								<span>
-									<span id="count" class="outTx"></span>
-									<button type="button" class="btnSt changeTo" id="start"></button>
-									<button type="button" class="strict changeTo" id="strict"></button>
-								</span>
-							</p>
+			<div class="game">
+					<div class="clr clr1 changeTo" id="green" ></div>
+					<div class="clr clr2 changeTo" id="red"></div>
+					<div class="clr clr3 changeTo" id="yellow"></div>
+					<div class="clr clr4 changeTo" id="blue"></div>
+					<div class="middle">
+						
+					<div class="gTitle">
+						<div class="gName">Simon
+							<span class="trademark">&#174;</span>
+						</div>
+					</div>
 
-							<p>
-								<span class="cnt">
-									COUNT         
-								</span>
-								<span class="strt">
-									START         
-								</span>
-								<span class="stct">
-									STRICT         
-								</span>
-							</p>
+					<div class="screen">
+							<div id="count" class="outTx"></div>
+							<button type="button" class="btnSt changeTo" id="start"></button>
+							<div class="led" id="led"> </div>
+							<button type="button" class="strict changeTo" id="strict"></button>
+
+							<span class="cnt">COUNT</span>
+							<span class="strt">START</span>
+							<span class="stct">STRICT</span>
+					</div>
 
 
 
+								<div class="on-off">
+										<span class="off">OFF</span>
+										<label class="switch">
+										<input type="checkbox" id="OnBtn">
+										<span class="slider"></span>
+										</label>
+										<span class="on">ON</span>
+								</div>
 
-							<br><br>
-							<p>
-									<span class="off">OFF</span>
-									<label class="switch">
-									  <input type="checkbox" id="OnBtn">
-									  <span class="slider"></span>
-									</label>
-									<span class="on">ON</span>
-							</p>
+					</div>
 				</div>
-			</div>
+
+		
 
 	</body>
 </html>
