@@ -10,22 +10,23 @@ body
 {
         background-image: url("Background.png");
         font-family: Oswald, sans-serif;
+        width:100%;
+        height: 100%;
 }
 
 
  
 .game 
 {
-        height: 38vw;
-        width: 38vw;
+        height: 40vw;
+        width: 40vw;
         background-color: #333;
         border-radius: 100%;
         text-align: center;
         position: relative;
-        vertical-align: middle;
         margin:0 auto;
         box-shadow: 0px 0px 1.6vw #333;
-        top:8vw;
+        top:10%;
 }
 
 
@@ -39,11 +40,11 @@ body
 
 .clr
 {
-        height: 46%;
-        width: 46%;
+        height: 17vw;
+        width: 17vw;
 	display: inline-block;
     	border-style: solid;
-	border-width: 1.1vw;
+	border-width: 1.5vw;
         border-color:#333;
 }
 .clr1
@@ -129,6 +130,7 @@ body
         height: 20%;
         position: absolute;
         top: 48%;
+        left: 4%;
 }
 
 .outTx 
@@ -163,7 +165,7 @@ body
         border-style: solid;
         border-color: #444444;
         top: 18%;
-        left: 56%;
+        left: 49%;
         box-shadow: 0px 0.2vw 0.2vw 0.08vw #6b6a6c;
 }
 
@@ -209,7 +211,7 @@ body
         position: absolute;
         font-size: 1vw;
         top: 84%;
-        left: 8%;
+        left: 11%;
 }
 
 .strt
@@ -217,7 +219,7 @@ body
         position: absolute;
         font-size: 1vw;
         top: 84%;
-        left: 52%;
+        left: 47%;
 }
 
 .stct
@@ -300,7 +302,7 @@ body
 }
 
 input[type=checkbox]:checked + .slider:before {
-    left:1.5vw;
+    left:1.7vw;
 }
 
 
