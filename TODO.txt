@@ -1,0 +1,5 @@
+1.write test for every function
+
+2.100% code coverage
+
+3.eslint
