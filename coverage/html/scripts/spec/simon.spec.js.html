@@ -1,0 +1,746 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/spec/simon.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/spec/</a> simon.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>149/149</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.33% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>31/31</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>149/149</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+describe("Start Game",function(){
+        beforeEach(function(){
+            spyOn(window,'reset');
+            spyOn(window,'emptyArr');
+            spyOn(window,'set');
+            spyOn(window,'addMove');
+        })
+        it("should start game only if on  is true and calls reset",function(){
+            expect(startGame()).toBe(0);
+            on=true;    //game started
+            expect(reset).toHaveBeenCalled();
+            //expect(emptyArr).toHaveBeenCalled();
+            expect(startGame()).toBe(1);
+        })
+&nbsp;
+        it("should call emptyArr,set,addMove function",function(){
+            startGame();
+            expect(emptyArr).toHaveBeenCalled();
+            expect(set).toHaveBeenCalled();
+            expect(addMove).toHaveBeenCalled();
+        })
+})
+&nbsp;
+describe("Empty Arr", function() {
+&nbsp;
+        beforeEach(function(){            
+            store.push(1);
+            usr_str.push(1);
+        })
+        it("should pop all elements from store, usr_str",function(){
+            expect(usr_str.length).toBe(1);
+            emptyArr();
+            expect(usr_str.length).toBe(0);
+            expect(store.length).toBe(0);
+        })
+    
+})
+&nbsp;
+&nbsp;
+describe("Reset",function(){
+    beforeEach(function(){
+        strict_mode=true;
+        timeouts=[1,2];
+    })
+    it("should reset the color",function(){
+        expect(strict_mode).toBe(true);
+        reset();
+        expect(document.getElementById("led").style.cssText).toContain("background-color: rgb(34, 34, 34)");
+        //reseting strict mode
+        expect(strict_mode).toBe(false);
+    })
+})
+&nbsp;
+&nbsp;
+&nbsp;
+describe("Addmove",function(){
+    beforeEach(function(){
+        store=[];
+        count=0;
+    })
+    it("push random value in store array",function(){
+        //intially store length 0
+        expect(store.length).toBe(0);
+        expect(addMove()).toBe(1);
+        expect(document.getElementById("count").innerHTML).toContain("0"+count);
+        //a move just added to store
+    })
+        
+    it("checks possible ,winning condition",function(){
+        //winning condition when count&gt;20
+        count=21;
+        // if count is greater than 21  ,and alert WON
+        expect(addMove()).toBe(0);
+        // no move added
+        expect(store.length).toBe(0);
+    })
+        
+&nbsp;
+&nbsp;
+    it("store a random value at each call ",function(){
+        //below will add 15 moves further
+        for(var i=0;i&lt;15;i++)
+            addMove();
+        console.log(store);
+        expect(store.length).toBe(15);
+        expect(document.getElementById("count").innerHTML).toContain(count);
+    })
+        
+&nbsp;
+})
+&nbsp;
+&nbsp;
+describe("ClickSquence",function(){
+    beforeEach(function(){
+        store=[1,2,3,4];
+        usr_str=[1,2];
+        jasmine.clock().install();
+        cpu_turn=false;
+        wrng=false;
+        count=1;
+    })
+    it("should click sequence present in store array in order",function(){
+        click_sequence(store,wrng);
+        for(var i=0;i&lt;store.length;i++)
+        {
+            switch(store[i])
+            {
+                case 1:
+                        jasmine.clock().tick(600);
+                        expect(document.getElementById("red").style.cssText).toContain("background-color: red;");
+                        jasmine.clock().tick(400);
+                        expect(document.getElementById("red").style.cssText).toContain("background-color: rgb(159, 15, 23);");
+                        break;
+                case 2:
+                        jasmine.clock().tick(600);
+                        expect(document.getElementById("green").style.cssText).toContain("background-color: green;");
+                        jasmine.clock().tick(400);
+                        expect(document.getElementById("green").style.cssText).toContain("background-color: rgb(0, 167, 74);");
+                        break;
+                case 3:
+                        jasmine.clock().tick(600);
+                        expect(document.getElementById("yellow").style.cssText).toContain("background-color: yellow;");
+                        jasmine.clock().tick(400);
+                        expect(document.getElementById("yellow").style.cssText).toContain("background-color: rgb(204, 167, 7);");
+                        break;
+                case 4:
+                        jasmine.clock().tick(600);
+                        expect(document.getElementById("blue").style.cssText).toContain("background-color: blue;");
+                        jasmine.clock().tick(400);
+                        expect(document.getElementById("blue").style.cssText).toContain("background-color: rgb(9, 74, 143);");
+                        break;
+            }
+        }
+    })
+&nbsp;
+    it("should turn cpu_turn flag to true while executing ",function(){
+        expect(cpu_turn).toBe(false);
+        click_sequence(store,wrng);
+        expect(cpu_turn).toBe(true);
+    })
+&nbsp;
+    it("should alert on error , and execute the sequence",function(){
+        wrng=true;
+        click_sequence(store,wrng);
+        jasmine.clock().tick(100);
+        expect(document.getElementById("count").innerHTML).toContain("!!");
+        jasmine.clock().tick(700);
+        expect(document.getElementById("count").innerHTML).toContain("0"+count);
+    })
+&nbsp;
+    it("should return 0 if button is not ON",function(){
+        on=false;
+        expect(click_sequence(store,wrng)).toBe(0);
+    })
+&nbsp;
+    afterEach(function(){
+        jasmine.clock().uninstall();
+    })
+})
+&nbsp;
+describe("Err",function(){
+    beforeEach(function(){
+        jasmine.clock().install();
+    })
+    it("Prints !! on display board on error",function(){
+        count=1;
+        err();
+        jasmine.clock().tick(100);
+        expect(document.getElementById("count").innerHTML).toContain("!!");
+        jasmine.clock().tick(700);
+        expect(document.getElementById("count").innerHTML).toContain("0"+count);
+    })
+&nbsp;
+    it("Prints !! on display board on error ,then count after some time",function(){
+        count=10;
+        err();
+        jasmine.clock().tick(100);
+        expect(document.getElementById("count").innerHTML).toContain("!!");
+        jasmine.clock().tick(700);
+        expect(document.getElementById("count").innerHTML).toContain(count);
+    })
+&nbsp;
+    afterEach(function(){
+        jasmine.clock().uninstall();
+    })
+})
+&nbsp;
+describe("Compare",function(){
+    beforeAll(function(){
+        store=[1,2,3,4];
+        usr_str=[1,2];
+        on=false;
+        strict_mode=false;
+        wrng=false;
+        spyOn(window,'addMove');
+        spyOn(window,'click_sequence');
+        spyOn(window,'err');
+        spyOn(window,'emptyArr');
+        jasmine.clock().install();
+    })
+    it("should not equal",function(){
+        expect(comp(store,usr_str)).toBe(0);
+        on=true;
+        expect(comp(store,usr_str)).toBe(1);
+        wrng=true;
+        expect(click_sequence).toHaveBeenCalledWith(store,wrng);
+        //testing strict mode
+        strict_mode=true;
+        comp(store,usr_str);
+        expect(err).toHaveBeenCalled();
+        expect(emptyArr).toHaveBeenCalled();
+        expect(addMove).not.toHaveBeenCalled();
+        //addMove will be called after 500 ms
+        jasmine.clock().tick(500);
+        expect(addMove).toHaveBeenCalled();
+    })
+    it("should compare two arrays",function(){
+        usr_str=[1,2,3,4];
+        //testing if arrays equal 
+        comp(store,usr_str);
+        <span class="missing-if-branch" title="else path not taken" >E</span>if(JSON.stringify(store) === JSON.stringify(usr_str))
+            expect(addMove).toHaveBeenCalled();
+        //changing usr_str to execute the false part
+    })
+    
+})
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 03 2017 23:58:59 GMT+0530 (IST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

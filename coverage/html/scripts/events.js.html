@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/events.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">scripts/</a> events.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.47% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>52/86</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.18% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.47% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>52/86</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var on=false;
+var count=0;
+var timeouts = [];
+var store=[];
+var usr_str=[];
+var cpu_turn=true;
+var strict_mode = false;
+var wrng=false;
+&nbsp;
+&nbsp;
+var eleId=["red","green","yellow","blue"];
+&nbsp;
+var bGcolor=["#9f0f17","#00a74a","#cca707","#094a8f"];
+&nbsp;
+&nbsp;
+function reset(){
+&nbsp;
+    for (var i = 0; i &lt; timeouts.length; i++) {
+            clearTimeout(timeouts[i]);
+        }
+&nbsp;
+    for(var i=0;i&lt;4;i++)
+    {
+        document.getElementById(eleId[i]).removeEventListener("click",userClick);
+    }
+    
+    document.getElementById("strict").removeEventListener("click", fStrict);
+    document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";
+&nbsp;
+    for(var i=0;i&lt;4;i++)
+    {
+        document.getElementById(eleId[i]).style.cssText="background-color:"+bGcolor[i];
+    }
+&nbsp;
+    strict_mode=false;
+&nbsp;
+}
+&nbsp;
+function set(){
+&nbsp;
+    for(var i=0;i&lt;4;i++)
+        document.getElementById(eleId[i]).addEventListener("click",userClick);
+&nbsp;
+    document.getElementById("strict").addEventListener("click", fStrict);
+}
+&nbsp;
+&nbsp;
+document.getElementById("count").innerHTML="";
+&nbsp;
+document.getElementById("OnBtn").addEventListener("change", <span class="fstat-no" title="function not covered" >function(){</span>
+<span class="cstat-no" title="statement not covered" >            on=!on;</span>
+<span class="cstat-no" title="statement not covered" >            if(on===false)</span>
+            {
+<span class="cstat-no" title="statement not covered" >                 reset();</span>
+<span class="cstat-no" title="statement not covered" >                 document.getElementById("start").removeEventListener("click", fstart);</span>
+<span class="cstat-no" title="statement not covered" >                 document.getElementById("count").innerHTML="";</span>
+            }
+            else
+            {
+<span class="cstat-no" title="statement not covered" >                set();</span>
+<span class="cstat-no" title="statement not covered" >                document.getElementById("start").addEventListener("click", fstart);</span>
+<span class="cstat-no" title="statement not covered" >                document.getElementById("count").innerHTML="--";</span>
+            }
+});
+&nbsp;
+&nbsp;
+//changing the color on click
+function click_simon(eleId){
+        var colorOn="";
+        var colorBef="";
+        switch(eleId)
+        {
+            case "red":
+                colorOn="background-color:red";
+                colorBef="background-color:#9f0f17";
+                document.getElementById("Sred").play();
+                break;
+            case "green":
+                colorOn="background-color:green";
+                colorBef="background-color:#00a74a";
+                document.getElementById("Sgreen").play();
+                break;
+            case "yellow":
+                colorOn="background-color:yellow";
+                colorBef="background-color:#cca707";
+                document.getElementById("Syellow").play();
+                break;
+            case "blue":
+                colorOn="background-color:blue";
+                colorBef="background-color:#094a8f";
+                document.getElementById("Sblue").play();
+                break;
+<span class="branch-4 cbranch-no" title="branch not covered" >            default:</span>
+<span class="cstat-no" title="statement not covered" >                break;</span>
+        }
+&nbsp;
+        document.getElementById(eleId).style.cssText = colorOn;
+        timeouts.push(setTimeout(function(){
+            document.getElementById(eleId).style.cssText = colorBef;
+        },400));
+&nbsp;
+}
+    
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function fStrict(){</span>
+<span class="cstat-no" title="statement not covered" >        strict_mode=!strict_mode;</span>
+<span class="cstat-no" title="statement not covered" >	    if(strict_mode===true)</span>
+<span class="cstat-no" title="statement not covered" >	       document.getElementById("led").style.cssText="background-color:red";</span>
+	    else
+<span class="cstat-no" title="statement not covered" >	       document.getElementById("led").style.cssText="background-color: rgb(34, 34, 34)";</span>
+        //change-led 
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function fstart(){</span>
+<span class="cstat-no" title="statement not covered" >            if(on===true)</span>
+<span class="cstat-no" title="statement not covered" >                startGame();</span>
+}
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function userClick(event){</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var eleId=event.target.getAttribute("id");</span>
+<span class="cstat-no" title="statement not covered" >            var audId="S"+eleId;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            var btnNo=5;</span>
+<span class="cstat-no" title="statement not covered" >            switch (eleId) {</span>
+                case "red":
+<span class="cstat-no" title="statement not covered" >                    btnNo=1;</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                case "green":
+<span class="cstat-no" title="statement not covered" >                    btnNo=2;</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                case "yellow":
+<span class="cstat-no" title="statement not covered" >                    btnNo=3;</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                case "blue":
+<span class="cstat-no" title="statement not covered" >                    btnNo=4;</span>
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+                default:
+<span class="cstat-no" title="statement not covered" >                    break;</span>
+            }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            if(usr_str.length == store.length || cpu_turn === true)</span>
+<span class="cstat-no" title="statement not covered" >               return;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            usr_str.push(btnNo);</span>
+            
+<span class="cstat-no" title="statement not covered" >            if(usr_str[usr_str.length-1]!==store[usr_str.length-1])</span>
+            {
+<span class="cstat-no" title="statement not covered" >               comp(store,usr_str);</span>
+            }
+            
+<span class="cstat-no" title="statement not covered" >            click_simon(eleId);</span>
+}
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 03 2017 18:57:15 GMT+0530 (IST)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
